@@ -1,4 +1,34 @@
-const questions = [
+const preQuestions = [
+  {
+    "type": "list",
+    "name": "buildType",
+    "message": "请选择使用的活动页面模板",
+    "choices": [
+      "standard",
+      "tabs",
+    ],
+    "default": "standard",
+  }
+]
+const nextQuestions = [
+  {
+    "type": "list",
+    "name": "fileType",
+    "message": "请选择模板形式，文件夹/文件",
+    "choices": [
+      "folder",
+      "file",
+    ],
+    "default": "folder"
+  },
+  {
+    "type": "input",
+    "name": "fileName",
+    "required": true,
+    "default": "index",
+    "message": "请输入文件夹/文件名称",
+  },  
+      
   // {
   //   type: 'confirm',
   //   name: 'toBeDelivered',
@@ -81,4 +111,7 @@ const questions = [
   //   }
   // }
 ]
-module.exports = questions
+module.exports = {
+  preQuestions,
+  nextQuestions
+}

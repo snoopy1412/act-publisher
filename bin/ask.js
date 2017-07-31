@@ -1,5 +1,5 @@
 const inquirer = require('inquirer')
-var getMetadata = require('./getMetadata.js')
+const getMetadata = require('./getMetadata.js')
 
 module.exports = function ask(src, name, callback) {
   var meta = getMetadata(src, name)
@@ -9,5 +9,5 @@ module.exports = function ask(src, name, callback) {
   })
   inquirer.prompt(questions).then(function (answers) {
     callback(answers)
-  });  
+  })
 }
